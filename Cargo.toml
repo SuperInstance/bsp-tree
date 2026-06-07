@@ -1,0 +1,11 @@
+[package]
+name = "bsp-tree"
+version = "0.1.0"
+edition = "2021"
+description = "Binary Space Partitioning: BSP tree construction, front-back ordering, portal generation, PVS"
+license = "MIT"
+repository = "https://github.com/SuperInstance/bsp-tree"
+keywords = ["bsp", "partitioning", "graphics", "visibility", "tree"]
+categories = ["graphics", "algorithms", "data-structures"]
+
+[dependencies]
