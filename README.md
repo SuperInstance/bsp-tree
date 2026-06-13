@@ -101,6 +101,10 @@ The BSP Tree provides the **spatial partitioning layer** for the SuperInstance f
 
 See [ARCHITECTURE.md](https://github.com/SuperInstance/SuperInstance/blob/main/ARCHITECTURE.md).
 
+**Splitter selection heuristic:** This implementation picks the first line as the splitter — simple but produces unbalanced trees for sorted input. Better heuristics include: (1) pick the line that minimizes split count (minimize O(n²) splits), (2) pick the median-angle line (balance the tree), or (3) random selection (probabilistic balance). The optimal splitter choice is NP-hard in general.
+
+**3D extension:** Extending to 3D requires splitting polygons (triangles) by planes rather than lines by lines. The cross product generalizes to the plane normal, and the parametric intersection computation extends naturally. The front-to-back traversal remains O(n) for a balanced tree.
+
 ## References
 
 1. Fuchs, H., Kedem, Z.M., & Naylor, B.F. (1980). "On Visible Surface Generation by A Priori Tree Structures." *SIGGRAPH*.
